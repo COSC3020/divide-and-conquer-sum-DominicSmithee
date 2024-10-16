@@ -1,5 +1,7 @@
 # Divide and Conquer Sum
 
+I aqcuired help from chatgbt for tips on how to merge my recursive sum function and my split array function. I read GeekForGeeks article on Divide and Conquer algorithms to learn more on how to implement a divide and conquer function.
+
 In the lectures, we've covered merge sort, which uses a divide-and-conquer
 approach to sort an array of values. There are many more algorithms that take
 such an approach. Implement a function that computes the sum of an array of
