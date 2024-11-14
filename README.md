@@ -1,6 +1,6 @@
 # Divide and Conquer Sum
 
-I aqcuired help from chatgbt for tips on how to merge my recursive sum function and my split array function. I read GeekForGeeks article on Divide and Conquer algorithms to learn more on how to implement a divide and conquer function.
+I aqcuired help from chatgbt for tips on how to merge my recursive sum function and my split array function. I read GeeksForGeeks article on Divide and Conquer algorithms to learn more on how to implement a divide and conquer function. I also used the GeeksForGeeks article on How to analyse Complexity of Recurrence Relation as well as Recurrence Relations | A Complete Guide to better understand recurrence relation magic. 
 
 In the lectures, we've covered merge sort, which uses a divide-and-conquer
 approach to sort an array of values. There are many more algorithms that take
@@ -27,3 +27,15 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+Answer:
+
+T(n) = {$\Theta$(0)   if n = 0
+
+$\Theta$(1)   if n = 1
+
+$\Theta$(2)   if n = 2
+
+3T(n/3) + $\Theta$(n)    if n < 2
+
+
