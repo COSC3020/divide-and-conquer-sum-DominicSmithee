@@ -34,9 +34,7 @@ Answer:
 
 T(n) = {
 
-1                        if n > 2
-
-3T(n/3) + $\Theta$(n)    if n < 2
+3T(n/3) + $\Theta$(n)    
 
 Time Complexity:
 
