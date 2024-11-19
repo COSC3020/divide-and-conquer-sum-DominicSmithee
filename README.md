@@ -34,11 +34,11 @@ Answer:
 
 T(n) = {
 
-3T(n/3) + $\Theta$(n)    
+3T(n/3) + O(n)    
 
 Time Complexity:
 
-$\Theta$(nlogn)
+O(nlogn)
 
 Reasoning:
 
