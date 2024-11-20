@@ -1,5 +1,9 @@
 # Divide and Conquer Sum
 
+I aqcuired help from chatgbt for tips on how to merge my recursive sum function and my split array function. I also used chatgpt to remember what asymptotic analysis was. I read GeeksForGeeks article on Divide and Conquer algorithms to learn more on how to implement a divide and conquer function. I also used the GeeksForGeeks article on How to analyse Complexity of Recurrence Relation as well as Recurrence Relations | A Complete Guide to better understand recurrence relation magic. I also used Chenna V's response to a merge sort analysis question on stackOverflow: 
+https://stackoverflow.com/questions/7801861/why-is-merge-sort-worst-case-run-time-o-n-log-n
+I used claude.ai to analyze the runtime again. 
+
 In the lectures, we've covered merge sort, which uses a divide-and-conquer
 approach to sort an array of values. There are many more algorithms that take
 such an approach. Implement a function that computes the sum of an array of
@@ -25,3 +29,20 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+Answer:
+
+T(n) = {
+
+0                 if n = 0,
+constant          if n = 1,
+constant          if n = 2,
+3T(n/3)+constant  if n > 2
+
+Time Complexity:
+
+O(nlogn)
+
+Reasoning:
+
+If n = 0, n = 1, or n = 2 the base cases are known and linear. As such, the time complexity is simply T(n) where n is the input. If n < 2, we must solve for the theta complexity. We start by knowing the recurrence relation for a divide and conquer algorithm from class: T(n) = 2T(n/2) + constant. This relation is for a classic merge sort with two split sub arrays. This split relation is represented in the recurence relation as x: T(n) = xT(n/x). For three split subarrays, x could be changed in the relation to: T(n) = 3T(n/3) + a constant. The time complexity for a classic merge sort is $\Theta$(nlog(base 2)n). This is because we are doing log(base 2) 'stages' of splitting the original array. While splitting the array into three subarrays, we would have log(base 3) 'stages'. As such, the time complexity is simply subsituted to $\Theta$(nlog(base 3)n). 
